@@ -162,8 +162,7 @@
                 <img src="img/8.png" alt="">
                 <div class="portfolio-layer">
                 <h4>Color Grading</h4>
-                <p>Color grading dalam editing video adalah proses menyesuaikan dan memperbaiki warna serta pencahayaan video untuk menciptakan suasana, mood, atau gaya visual tertentu yang diinginkan.</p>
-                <button onclick="openPopup('popup7')">Lihat Gambar</button>
+                <button onclick="openPopup('popup7')">Lihat Video</button>
                 </div>
             </div>
         
@@ -171,8 +170,7 @@
                 <img src="img/7.png" alt="">
                 <div class="portfolio-layer">
                 <h4>Animation Logo</h4>
-                <p>Logo animation adalah proses membuat logo bergerak atau hidup dengan efek animasi untuk membuatnya lebih menarik dan dinamis saat ditampilkan, misalnya di video atau website.</p>
-                <button onclick="openPopup('popup8')">Lihat Gambar</button>
+                <button onclick="openPopup('popup8')">Lihat Video</button>
                 </div>
             </div>
         
@@ -180,8 +178,7 @@
                 <img src="img/9.png" alt="">
                 <div class="portfolio-layer">
                 <h4>Edit Video</h4>
-                <p>Editing video adalah proses mengatur dan menggabungkan rekaman video, audio, serta efek untuk membuat hasil video yang lebih menarik dan sesuai tujuan.</p>
-                <button onclick="openPopup('popup9')">Lihat Gambar</button>
+                <button onclick="openPopup('popup9')">Lihat Video</button>
                 </div>
             </div>
         
@@ -404,10 +401,12 @@
     <div class="popup" id="popup7">
       <div class="popup-content">
         <span class="close" onclick="closePopup('popup7')">&times;</span>
-        <img src="img/6.png" alt="Gambar 3" class="zoomable">
-        <div class="popup-text">
-          <h3>Quote Design</h3>
-          <p>Quote Design adalah desain visual yang menampilkan kutipan atau kata-kata mutiara dengan tata letak, tipografi, dan elemen grafis yang menarik agar pesan lebih kuat dan estetis.</p>
+        <video controls autoplay playsinline style="max-width:100%; max-height:70vh; border-radius:10px;">
+          <source src="video/color-grading.mp4" type="video/mp4">
+    </video>
+    <div class="popup-text">
+          <h3>Color Grading</h3>
+          <p>Color grading dalam editing video adalah proses menyesuaikan dan memperbaiki warna serta pencahayaan video untuk menciptakan suasana, mood, atau gaya visual tertentu yang diinginkan.</p>
         </div>
          <!-- Tombol Zoom -->
         <div class="zoom-controls">
@@ -421,10 +420,12 @@
     <div class="popup" id="popup8">
       <div class="popup-content">
         <span class="close" onclick="closePopup('popup8')">&times;</span>
-        <img src="img/6.png" alt="Gambar 3" class="zoomable">
+        <video controls autoplay playsinline style="max-width:100%; max-height:70vh; border-radius:10px;">
+          <source src="video/logo.mp4" type="video/mp4">
+    </video>
         <div class="popup-text">
-          <h3>Quote Design</h3>
-          <p>Quote Design adalah desain visual yang menampilkan kutipan atau kata-kata mutiara dengan tata letak, tipografi, dan elemen grafis yang menarik agar pesan lebih kuat dan estetis.</p>
+          <h3>Logo Animate</h3>
+          <p>Logo animation adalah proses membuat logo bergerak atau hidup dengan efek animasi untuk membuatnya lebih menarik dan dinamis saat ditampilkan, misalnya di video atau website.</p>
         </div>
          <!-- Tombol Zoom -->
         <div class="zoom-controls">
@@ -438,10 +439,12 @@
     <div class="popup" id="popup9">
       <div class="popup-content">
         <span class="close" onclick="closePopup('popup9')">&times;</span>
-        <img src="img/6.png" alt="Gambar 3" class="zoomable">
+        <video controls preload="auto" playsinline style="max-width:100%; max-height:70vh; border-radius:10px;">
+          <source src="video/editing.mp4" type="video/mp4">
+        </video>        
         <div class="popup-text">
-          <h3>Quote Design</h3>
-          <p>Quote Design adalah desain visual yang menampilkan kutipan atau kata-kata mutiara dengan tata letak, tipografi, dan elemen grafis yang menarik agar pesan lebih kuat dan estetis.</p>
+          <h3>Editing Video</h3>
+          <p>Editing video adalah proses mengatur dan menggabungkan rekaman video, audio, serta efek untuk membuat hasil video yang lebih menarik dan sesuai tujuan.</p>
         </div>
          <!-- Tombol Zoom -->
         <div class="zoom-controls">
@@ -635,7 +638,7 @@
     }
   }
 
-  // 🔹 Zoom + Drag untuk semua gambar zoomable
+  //  Zoom + Drag untuk semua gambar zoomable
   document.querySelectorAll(".zoomable").forEach(img => {
     let scale = 1;
     let posX = 0, posY = 0;
@@ -686,12 +689,12 @@
     });
   });
 
-  // 🔹 Fungsi update transform
+  // Fungsi update transform
   function updateTransform(img) {
     img.style.transform = `translate(${img.dataset.posX}px, ${img.dataset.posY}px) scale(${img.dataset.scale})`;
-  }
+  };
 
-  // 🔹 Zoom pakai tombol
+  // Zoom pakai tombol
   function zoomImage(btn, type) {
     let container = btn.closest(".popup-content");
     let img = container.querySelector(".zoomable");
@@ -706,7 +709,26 @@
 
     img.dataset.scale = scale;
     updateTransform(img);
+  };
+
+  // Tutup popup kalau klik luar + stop video
+  window.onclick = function(event) {
+    if (event.target.classList.contains('popup')) {
+      event.target.style.display = "none";
+
+      //  Stop video kalau ada
+      const video = event.target.querySelector("video");
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    }
   }
+
+  document.querySelectorAll("video").forEach(v => {
+    v.muted = false; // pastikan tidak mute
+    v.volume = 1.0;  // volume full
+  });
 </script>
 
 </body>

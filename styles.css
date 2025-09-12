@@ -429,9 +429,11 @@ button {
     cursor: pointer;
   }
 
-  button:hover { background: #0056b3; }
+button:hover {
+    background: #0056b3; 
+}
 
-  .popup {
+.popup {
     display: none;
     position: fixed;
     z-index: 999;
@@ -440,7 +442,8 @@ button {
     justify-content: center;
     align-items: center;
     padding: 15px;
-  }
+}
+
   .popup-content {
     background: #fff;
     border-radius: 12px;
