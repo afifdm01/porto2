@@ -37,14 +37,32 @@
         <p>Karya dari santri Akademi Teknologi Alhimmah.
           <br>Fokus di bidang Ilmu Teknologi
         </p>
-        
-        <div class="social-media">
-            <a href="#"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#"><i class="fa-brands fa-telegram"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+
+        <!-- Sosial Media -->
+        <div class="social-media-me">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/username" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-facebook"></i>
+          </a>
+      
+          <!-- Telegram -->
+          <a href="https://t.me/username" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-telegram"></i>
+          </a>
+      
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/a.dzakir.m/" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-instagram"></i>
+          </a>
+      
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@fiefanakbaik_" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-tiktok"></i>
+          </a>
         </div>
-        <a href="#" class="btn">Read More</a>
+
+      <a href="#" class="btn">Read More</a>
+      
     </div>
     <div class="home-img">
         <img src="img/p.png" alt="">
@@ -152,7 +170,7 @@
             </div>
     
         </div>
-    </div> 
+      </div> 
 
     <!-- Editing -->
     <div class="projects2">
@@ -273,128 +291,160 @@
 </section>
   
   <!-- CONTACT SECTION DESIGN -->
-<section class="contact" id="contact">
-    <h2 class="heading">Contact <span>Me</span></h2>
-  
-    <form action="#">
-      <div class="input-box">
-        <input type="text" placeholder="Full Name">
-        <input type="email" placeholder="Email Address">
+  <section class="contact-section" id="contact">
+    <!-- Bagian kiri -->
+    <div class="contact-info">
+      <h1>Contact <span>Me</span></h1>
+      <h3>Let's work Together</h3>
+      <p>Hubungi lewat email atau nomer di bawah ini untuk keterangan lebih lanjut atau juga bisa clik icone di bawah.</p>
+      
+      <div class="info">
+        <i class="fa-solid fa-paper-plane"></i> afifdm01@gmail.com
       </div>
-  
-      <div class="input-box">
-        <input type="number" placeholder="Mobile Number">
-        <input type="text" placeholder="Email Subject">
+      <div class="info">
+        <i class="fa-solid fa-phone"></i> 0123456789
       </div>
-  
-      <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
-      <input type="submit" value="Send Message" class="btn">
+
+      <div class="info-media">
+      <h3>Click the icon to my social media:</h3>
+    </div>
+      <!-- Sosial Media -->
+      <div class="social-media">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/username" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-facebook"></i>
+        </a>
+    
+        <!-- Telegram -->
+        <a href="https://t.me/username" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-telegram"></i>
+        </a>
+    
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/a.dzakir.m/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    
+        <!-- TikTok -->
+        <a href="https://www.tiktok.com/@fiefanakbaik_" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Bagian kanan -->
+    <form class="contact-form">
+      <input type="text" placeholder="Enter Your Name" required>
+      <input type="email" placeholder="Enter Your Email" required>
+      <input type="text" placeholder="Enter Your Subject" required>
+      <textarea rows="6" placeholder="Enter Your Message" required></textarea>
+      <button class="btn">Submit</button>
     </form>
   </section>
   
   <!--design  -->
   <div class="popup-design">
-  <!-- Popup 1 -->
-  <div class="popup" id="popup1">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup('popup1')">&times;</span>
-      <img src="img/2.png" alt="Gambar 1" class="zoomable">
-      <div class="popup-text">
-        <h3>Poster</h3>
-        <p>Poster adalah media visual berisi pesan singkat untuk menarik perhatian dan menyampaikan informasi.</p>
-      </div>
-      <!-- Tombol Zoom -->
-      <div class="zoom-controls">
-        <button onclick="zoomImage(this, 'in')">+</button>
-        <button onclick="zoomImage(this, 'out')">-</button>
+    <!-- Popup 1 -->
+    <div class="popup" id="popup1">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup1')">&times;</span>
+        <img src="img/2.png" alt="Gambar 1" class="zoomable">
+        <div class="popup-text">
+          <h3>Poster</h3>
+          <p>Poster adalah media visual berisi pesan singkat untuk menarik perhatian dan menyampaikan informasi.</p>
+        </div>
+        <!-- Tombol Zoom -->
+        <div class="zoom-controls">
+          <button onclick="zoomImage(this, 'in')">+</button>
+          <button onclick="zoomImage(this, 'out')">-</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Popup 2 -->
-  <div class="popup" id="popup2">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup('popup2')">&times;</span>
-      <img src="img/5.png" alt="Gambar 2" class="zoomable">
-      <div class="popup-text">
-        <h3>Zine</h3>
-        <p>Zine adalah publikasi kecil dan mandiri berisi tulisan, gambar, atau karya seni yang dibuat secara bebas dan personal.</p>
-      </div>
-       <!-- Tombol Zoom -->
-      <div class="zoom-controls">
-        <button onclick="zoomImage(this, 'in')">+</button>
-        <button onclick="zoomImage(this, 'out')">-</button>
+    <!-- Popup 2 -->
+    <div class="popup" id="popup2">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup2')">&times;</span>
+        <img src="img/5.png" alt="Gambar 2" class="zoomable">
+        <div class="popup-text">
+          <h3>Zine</h3>
+          <p>Zine adalah publikasi kecil dan mandiri berisi tulisan, gambar, atau karya seni yang dibuat secara bebas dan personal.</p>
+        </div>
+        <!-- Tombol Zoom -->
+        <div class="zoom-controls">
+          <button onclick="zoomImage(this, 'in')">+</button>
+          <button onclick="zoomImage(this, 'out')">-</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Popup 3 -->
-  <div class="popup" id="popup3">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup('popup3')">&times;</span>
-      <img src="img/3.png" alt="Gambar 1" class="zoomable">
-      <div class="popup-text">
-        <h3>Banner</h3>
-        <p>Logo adalah simbol atau gambar yang mewakili identitas suatu merek, organisasi, atau produk.</p>
-      </div>
-      <!-- Tombol Zoom -->
-      <div class="zoom-controls">
-        <button onclick="zoomImage(this, 'in')">+</button>
-        <button onclick="zoomImage(this, 'out')">-</button>
+    <!-- Popup 3 -->
+    <div class="popup" id="popup3">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup3')">&times;</span>
+        <img src="img/3.png" alt="Gambar 1" class="zoomable">
+        <div class="popup-text">
+          <h3>Banner</h3>
+          <p>Logo adalah simbol atau gambar yang mewakili identitas suatu merek, organisasi, atau produk.</p>
+        </div>
+        <!-- Tombol Zoom -->
+        <div class="zoom-controls">
+          <button onclick="zoomImage(this, 'in')">+</button>
+          <button onclick="zoomImage(this, 'out')">-</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Popup 4 -->
-  <div class="popup" id="popup4">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup('popup4')">&times;</span>
-      <img src="img/1.png" alt="Gambar 1" class="zoomable">
-      <div class="popup-text">
-        <h3>Logo</h3>
-        <p>Logo adalah simbol atau gambar yang mewakili identitas suatu merek, organisasi, atau produk.</p>
-      </div>
-      <!-- Tombol Zoom -->
-      <div class="zoom-controls">
-        <button onclick="zoomImage(this, 'in')">+</button>
-        <button onclick="zoomImage(this, 'out')">-</button>
+    <!-- Popup 4 -->
+    <div class="popup" id="popup4">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup4')">&times;</span>
+        <img src="img/1.png" alt="Gambar 1" class="zoomable">
+        <div class="popup-text">
+          <h3>Logo</h3>
+          <p>Logo adalah simbol atau gambar yang mewakili identitas suatu merek, organisasi, atau produk.</p>
+        </div>
+        <!-- Tombol Zoom -->
+        <div class="zoom-controls">
+          <button onclick="zoomImage(this, 'in')">+</button>
+          <button onclick="zoomImage(this, 'out')">-</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Popup 5 -->
-  <div class="popup" id="popup5">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup('popup5')">&times;</span>
-      <img src="img/4.png" alt="Gambar 2" class="zoomable">
-      <div class="popup-text">
-        <h3>Isomatric</h3>
-        <p>Isometrik (atau isometric) adalah teknik gambar 3D di mana objek digambar dengan sudut yang sama (biasanya 120° antar sumbu) tanpa distorsi perspektif, sehingga semua sisi terlihat proporsional.</p>
-      </div>
-       <!-- Tombol Zoom -->
-      <div class="zoom-controls">
-        <button onclick="zoomImage(this, 'in')">+</button>
-        <button onclick="zoomImage(this, 'out')">-</button>
+    <!-- Popup 5 -->
+    <div class="popup" id="popup5">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup5')">&times;</span>
+        <img src="img/4.png" alt="Gambar 2" class="zoomable">
+        <div class="popup-text">
+          <h3>Isomatric</h3>
+          <p>Isometrik (atau isometric) adalah teknik gambar 3D di mana objek digambar dengan sudut yang sama (biasanya 120° antar sumbu) tanpa distorsi perspektif, sehingga semua sisi terlihat proporsional.</p>
+        </div>
+        <!-- Tombol Zoom -->
+        <div class="zoom-controls">
+          <button onclick="zoomImage(this, 'in')">+</button>
+          <button onclick="zoomImage(this, 'out')">-</button>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Popup 6 -->
-  <div class="popup" id="popup6">
-    <div class="popup-content">
-      <span class="close" onclick="closePopup('popup6')">&times;</span>
-      <img src="img/6.png" alt="Gambar 3" class="zoomable">
-      <div class="popup-text">
-        <h3>Quote Design</h3>
-        <p>Quote Design adalah desain visual yang menampilkan kutipan atau kata-kata mutiara dengan tata letak, tipografi, dan elemen grafis yang menarik agar pesan lebih kuat dan estetis.</p>
-      </div>
-       <!-- Tombol Zoom -->
-      <div class="zoom-controls">
-        <button onclick="zoomImage(this, 'in')">+</button>
-        <button onclick="zoomImage(this, 'out')">-</button>
+    <!-- Popup 6 -->
+    <div class="popup" id="popup6">
+      <div class="popup-content">
+        <span class="close" onclick="closePopup('popup6')">&times;</span>
+        <img src="img/6.png" alt="Gambar 3" class="zoomable">
+        <div class="popup-text">
+          <h3>Quote Design</h3>
+          <p>Quote Design adalah desain visual yang menampilkan kutipan atau kata-kata mutiara dengan tata letak, tipografi, dan elemen grafis yang menarik agar pesan lebih kuat dan estetis.</p>
+        </div>
+        <!-- Tombol Zoom -->
+        <div class="zoom-controls">
+          <button onclick="zoomImage(this, 'in')">+</button>
+          <button onclick="zoomImage(this, 'out')">-</button>
+        </div>
       </div>
     </div>
-  </div>
 </div>
 
  <!-- editing -->
@@ -403,9 +453,9 @@
     <div class="popup" id="popup7">
       <div class="popup-content">
         <span class="close" onclick="closePopup('popup7')">&times;</span>
-        <video controls preload="auto" playsinline style="max-width:100%; max-height:70vh; border-radius:10px;">
+        <video class="custom-video" controls preload="auto" playsinline>
           <source src="video/color-grading.mp4" type="video/mp4">
-    </video>
+        </video>
     <div class="popup-text">
           <h3>Color Grading</h3>
           <p>Color grading dalam editing video adalah proses menyesuaikan dan memperbaiki warna serta pencahayaan video untuk menciptakan suasana, mood, atau gaya visual tertentu yang diinginkan.</p>
@@ -422,7 +472,7 @@
     <div class="popup" id="popup8">
       <div class="popup-content">
         <span class="close" onclick="closePopup('popup8')">&times;</span>
-        <video controls preload="auto" playsinline style="max-width:100%; max-height:70vh; border-radius:10px;">
+        <video class="custom-video" controls preload="auto" playsinline>
           <source src="video/logo.mp4" type="video/mp4">
         </video>
         <div class="popup-text">
@@ -441,7 +491,7 @@
     <div class="popup" id="popup9">
       <div class="popup-content">
         <span class="close" onclick="closePopup('popup9')">&times;</span>
-        <video controls preload="auto" playsinline style="max-width:100%; max-height:70vh; border-radius:10px;">
+        <video class="custom-video" controls preload="auto" playsinline>
           <source src="video/editing.mp4" type="video/mp4">
         </video>        
         <div class="popup-text">
@@ -599,8 +649,6 @@
     </div>
   </div>
 </div>
-
-
 </div>
 
 <!-- FOOTER DESIGN -->

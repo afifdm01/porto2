@@ -113,7 +113,7 @@ span {
 .home-content p {
     font-size: 1.6rem;
 }
-.social-media a {
+.social-media-me a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -128,7 +128,7 @@ span {
     transition: .5s ease;
 }
 
-.social-media a:hover {
+.social-media-me a:hover {
     background: var(--main-color);
     color: var(--snd-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
@@ -346,44 +346,124 @@ span {
     font-size: 2rem;
     color: var(--snd-bf-color);
 }
-.contact h2 {
-    margin-bottom: 3rem;
-}
   
-.contact form {
-    max-width: 70rem;
-    margin: 1rem auto;
-    text-align: center;
-    margin-bottom: 3rem;
-}
-  
-.contact form .input-box {
+.contact-section {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 80px 9%;
+    gap: 40px;
+    min-height: auto;
+    padding-bottom: 10rem;
+  }
+
+  /* Bagian kiri */
+  .contact-info {
+    flex: 1 1 300px;
+  }
+
+  .contact-info h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+
+  .contact-info h1 span {
+    color: #00e5ff;
+  }
+
+  .contact-info h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 400;
+  }
+
+  .contact-info .info-media h3 {
+    font-size: 2rem;
+    margin-top: 4rem;
+    font-weight: 700;
+  }
+
+  .contact-info p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #ccc;
+  }
+
+  .contact-info .info {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+  }
+
+  .contact-info .social-media {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    transition: .5s ease;
+    margin-bottom: 0;
 }
-.contact form .input-box input,
-.contact form textarea {
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--snd-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+  /* Bagian kanan (form) */
+  .contact-form {
+    flex: 1 1 350px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
     width: 100%;
-    padding: 1.5rem;
-    font-size: 1.6rem;
-    color: var(--text-color);
-    background: var(--snd-bf-color);
-    border-radius: .8rem;
-    margin: .7rem 0;
-}
-
-.contact form .input-box input {
-    width: 49%;
-}
-
-.contact form textarea {
+    padding: 14px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    background: #444;
+    color: #fff;
+    font-size: 16px;
     resize: none;
-}
+  }
 
-.contact form .btn {
-    margin-top: 2rem;
-    cursor: pointer;
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: #aaa;
+  }
+
+
+.contact-form .btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+.contact-form .btn:hover {
+    box-shadow: none;
 }
 
 .footer {
@@ -444,7 +524,7 @@ button:hover {
     padding: 15px;
 }
 
-.popup-content {
+  .popup-content {
     background: #fff;
     border-radius: 12px;
     max-width: 95vw;
@@ -453,8 +533,7 @@ button:hover {
     padding: 15px;
     text-align: center;
     overflow: hidden; /* biar gambar tidak keluar */
-}
-
+  }
   .popup-content img {
     max-width: 100%;
     max-height: 70vh;
@@ -462,22 +541,19 @@ button:hover {
     margin-bottom: 10px;
     transition: transform 0.2s ease;
     cursor: grab;
-}
-
+  }
   .popup-text h3 { 
     font-size: 20px;
     color: #333; 
-}
-
+  }
   .popup-text p { 
     font-size: 16px;
     color: #333;
     padding-top: 1rem; 
     margin-left: 3rem;
     margin-right: 3rem;
-}
-
-.close {
+  }
+  .close {
     position: absolute;
     top: 10px;
     right: 15px;
@@ -487,7 +563,7 @@ button:hover {
     color: #333;
 }
 
-.close:hover {
+  .close:hover {
     color: red;
 }
 
@@ -496,18 +572,18 @@ button:hover {
     max-height: 70vh;
     border-radius: 10px;
 }
+  
 
-/* Tombol Zoom */
-.zoom-controls {
+  /* Tombol Zoom */
+  .zoom-controls {
     position: absolute;
     bottom: 20px;
     right: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-.zoom-controls button {
+  }
+  .zoom-controls button {
     width: 45px;
     height: 45px;
     font-size: 24px;
@@ -518,13 +594,13 @@ button:hover {
     text-align: center;
     justify-content: center;
     display: flex;
-}
-
-.zoom-controls button:hover {
+  }
+  .zoom-controls button:hover {
     background: #0056b3;
-}
+  }
 
 /* BREAKPOINT */
+
 @media (max-width: 1020px) {
     html {
         font-size: 55%;
@@ -556,7 +632,6 @@ button:hover {
         padding: 2rem 3%;
     }
 }
-
 @media (max-width: 768px) {
     #menu-icon {
         display: block;
@@ -625,8 +700,20 @@ button:hover {
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
     }
-}
 
+    .contact-section {
+        flex-direction: column;
+        padding: 30px 5%;
+      }
+
+      .contact-info h1 {
+        font-size: 36px;
+      }
+
+      .contact-form button {
+        font-size: 16px;
+      }
+}
 @media (max-width: 617px) {
     .portfolio-container {
       grid-template-columns: 1fr;
@@ -642,7 +729,6 @@ button:hover {
       margin-top: 4rem;
     }
 }
-
 @media (max-width: 450px) {
     html {
       font-size: 50%;
